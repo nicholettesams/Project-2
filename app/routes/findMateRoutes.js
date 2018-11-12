@@ -28,9 +28,9 @@ router.get("/api/mates/:animal_id", function(req, res) {
 });
 
 router.put("/api/mates/:animal_id", function(req, res) {
-    var mutable = false; //TODO: find out if we need to pass this parameter from the front end
+    var matable = false; //TODO: find out if we need to pass this parameter from the front end
 
-    sql = "UPDATE animals SET matable = " + mutable
+    sql = "UPDATE animals SET matable = " + matable
     sql = sql + " WHERE id = " + req.params.animal_id;
 
     connection.query(sql, function(err, results) {
