@@ -14,6 +14,7 @@ CREATE TABLE IF NOT EXISTS zoos (
     zip_code TINYINT NOT NULL,
     phone varchar(20),
     contact_name varchar(255),
+    contact_email varchar(500)
     PRIMARY KEY (id)
 );
 
@@ -34,7 +35,8 @@ CREATE TABLE IF NOT EXISTS animals (
 CREATE TABLE IF NOT EXISTS species (
     id INT AUTO_INCREMENT,
     species_name VARCHAR(100) NOT NULL,
-    endangered INT, /* Scale of 1-5*/
+    scientific_name varchar(200), 
+    endangered BOOLEAN, 
     gestation_months INT,
     mating_age_min INT,
     mating_age_max INT,
