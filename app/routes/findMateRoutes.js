@@ -43,4 +43,4 @@ router.put("/api/mates/:animal_id", function(req, res) {
 
 
 
-module.exports = router
+module.exports = router;
