@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS mates (
 
 
 CREATE VIEW view_animals as
-SELECT a.id, a.animal_name, a.gender, a.matable, a.birth_date, YEAR(now()) - YEAR(a.birth_date) - ( DAYOFYEAR(now()) < DAYOFYEAR(a.birth_date) ) as age, a.image_url
+SELECT a.id, a.zoo_id, a.animal_name, a.gender, a.matable, a.birth_date, YEAR(now()) - YEAR(a.birth_date) - ( DAYOFYEAR(now()) < DAYOFYEAR(a.birth_date) ) as age, a.image_url
 , z.zoo_name, s.species_name, IFNULL(a2.animal_name, '') as mom_name, IFNULL(a3.animal_name, '') as dad_name 
 FROM zoomate.animals as a
 INNER JOIN zoomate.zoos as z ON z.id = a.zoo_id
