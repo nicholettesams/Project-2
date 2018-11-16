@@ -7,11 +7,19 @@ body {
 }
 
 h1 {
-    margin-left: 60px;
+    margin-left: 50px;
+}
+
+h2 {
+    margin-left: 50px;
+}
+
+h3 {
+    margin-left: 50px;
 }
 
 h4 {
-    margin-left: 60px;
+    margin-left: 50px;
 }
 
 .dropbtn {
@@ -23,7 +31,7 @@ h4 {
 }
 
 .dropdown {
-    margin-left: 60px;
+    margin-left: 50px;
     position: relative;
     display: inline-block;    
 }
