@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS zoos (
     zip_code INT NOT NULL,
     phone varchar(20),
     contact_name varchar(255),
-    contact_email varchar(500)
+    contact_email varchar(500),
     PRIMARY KEY (id)
 );
 
@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS animals (
     gender VARCHAR(1),
     matable BOOLEAN,
     birth_date DATE,
-    image_URL VARCHAR(500) ,
+    image_URL VARCHAR(500),
     PRIMARY KEY (id)
 ); 
 
