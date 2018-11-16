@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS zoos (
     address VARCHAR(100),
     city VARCHAR(50),
     state VARCHAR(2) ,
-    zip_code TINYINT NOT NULL,
+    zip_code INT NOT NULL,
     phone varchar(20),
     contact_name varchar(255),
     contact_email varchar(500)
