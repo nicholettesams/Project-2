@@ -46,7 +46,7 @@ $(function() {
         });
 
 
-    // Load mom and dad drop down
+    // Load mom drop down
     $.ajax("/api/animals", {
         type: "GET",
         }).then(
@@ -57,7 +57,6 @@ $(function() {
             el.attr("selected")
             el.text("Selct your animal")
             $("#mom-dd").append(el); 
-            $("#dad-dd").append(el);
 
             for(i=0; i< res.length; i++){
                 var el = $('<option>')
@@ -65,9 +64,30 @@ $(function() {
                 el.attr("value", res[i].animal_name)
                 el.text(res[i].animal_name)
                 $("#mom-dd").append(el);  
+            }
+        });
+
+    // Load dad drop down
+    $.ajax("/api/animals", {
+        type: "GET",
+        }).then(
+        function(res) {
+
+            var el = $('<option>')
+            el.attr("table_id", 0)
+            el.attr("selected")
+            el.text("Selct your animal")
+            $("#dad-dd").append(el);
+
+            for(i=0; i< res.length; i++){
+                var el = $('<option>')
+                el.attr("table_id", res[i].id)
+                el.attr("value", res[i].animal_name)
+                el.text(res[i].animal_name)
                 $("#dad-dd").append(el);
 
             }
         });
+
 
 });
