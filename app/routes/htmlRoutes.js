@@ -14,11 +14,8 @@ router.get("/add", function(req, res){
 
 router.get("/zoo", function(req, res) {
 
-    var hbsObject = {
-    zoo_name: "test"
-    };
-    console.log(hbsObject);
-    res.render("index", hbsObject);
+    console.log(req.query)
+    res.render("index", req.query);
 
 });
 
