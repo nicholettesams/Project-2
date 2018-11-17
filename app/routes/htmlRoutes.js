@@ -11,8 +11,15 @@ router.get("/add", function(req, res){
     res.sendFile(path.join(__dirname, "../public/pages/add_animal.html"));
 });
 
-router.get("/zoo/:zoo_id", function(req, res){
-    res.sendFile(path.join(__dirname, "../views/layouts/main.handlebars"));
+
+router.get("/zoo", function(req, res) {
+
+    var hbsObject = {
+    zoo_name: "test"
+    };
+    console.log(hbsObject);
+    res.render("index", hbsObject);
+
 });
 
 module.exports = router;
