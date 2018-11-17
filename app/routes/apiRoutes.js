@@ -31,4 +31,33 @@ router.get("/api/zoos", function(req, res) {
     
 });
 
+
+router.get("/api/species", function(req, res) {
+
+    var sql = "SELECT * FROM species"
+ 
+    connection.query(sql, function(err, results) {
+        if (err) throw err;
+  
+        res.json(results)
+    
+    });
+    
+});
+
+
+router.get("/api/animals", function(req, res) {
+
+    var sql = "SELECT * FROM animals"
+ 
+    connection.query(sql, function(err, results) {
+        if (err) throw err;
+  
+        res.json(results)
+    
+    });
+    
+});
+
+
 module.exports = router
