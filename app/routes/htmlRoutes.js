@@ -20,7 +20,4 @@ router.get("/zoo", function(req, res) {
     res.render("index", hbsObject);
 });
 
-
-
-
 module.exports = router;
