@@ -11,9 +11,10 @@ CREATE TABLE IF NOT EXISTS zoos (
     address VARCHAR(100),
     city VARCHAR(50),
     state VARCHAR(2) ,
-    zip_code TINYINT NOT NULL,
+    zip_code INT NOT NULL,
     phone varchar(20),
     contact_name varchar(255),
+    contact_email varchar(500),
     PRIMARY KEY (id)
 );
 
@@ -25,7 +26,7 @@ CREATE TABLE IF NOT EXISTS animals (
     mom_id INT, /* Foreign key to animals table */
     dad_id INT, /* Foreign key to animals table */
     gender VARCHAR(1),
-    mating_status VARCHAR(50),
+    matable BOOLEAN,
     birth_date DATE,
     image_URL VARCHAR(500) ,
     PRIMARY KEY (id)
@@ -34,7 +35,8 @@ CREATE TABLE IF NOT EXISTS animals (
 CREATE TABLE IF NOT EXISTS species (
     id INT AUTO_INCREMENT,
     species_name VARCHAR(100) NOT NULL,
-    endangered INT, /* Scale of 1-5*/
+    scientific_name varchar(200), 
+    endangered BOOLEAN, 
     gestation_months INT,
     mating_age_min INT,
     mating_age_max INT,
@@ -53,11 +55,10 @@ CREATE TABLE IF NOT EXISTS mates (
 
 
 CREATE VIEW view_animals as
-SELECT a.id, a.animal_name, a.gender, a.mating_status, a.birth_date, YEAR(CURDATE()) - YEAR(a.birth_date) AS age, a.image_url
+SELECT a.id, a.zoo_id, a.animal_name, a.gender, a.matable, a.birth_date, YEAR(now()) - YEAR(a.birth_date) - ( DAYOFYEAR(now()) < DAYOFYEAR(a.birth_date) ) as age, a.image_url
 , z.zoo_name, s.species_name, IFNULL(a2.animal_name, '') as mom_name, IFNULL(a3.animal_name, '') as dad_name 
 FROM zoomate.animals as a
 INNER JOIN zoomate.zoos as z ON z.id = a.zoo_id
 INNER JOIN zoomate.species as s ON a.species_id = s.id
 LEFT JOIN zoomate.animals as a2 ON a.mom_id = a2.id
 LEFT JOIN zoomate.animals as a3 ON a.dad_id = a3.id;
-
