@@ -23,6 +23,8 @@ app.set("view engine", "handlebars");
 
 const htmlRoutes = require("./app/routes/htmlRoutes.js");
 const apiRoutes = require("./app/routes/apiRoutes.js");
+
+
 const findMateRoutes = require("./app/routes/findMateRoutes.js");
 
 app.use(htmlRoutes);
@@ -31,7 +33,9 @@ app.use(findMateRoutes);
 
 const routes = require("./app/routes/htmlRoutes.js");
 
-app.use(routes);
+
+app.use(htmlRoutes);
+app.use(apiRoutes);
 
 
 // Start our server so that it can begin listening to client requests.
