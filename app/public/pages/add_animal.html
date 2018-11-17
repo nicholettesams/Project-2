@@ -14,49 +14,32 @@
         <input type="text" name="animal name" placeholder="ie. Dumbo" autofocus/> <br>
         <hr>
         
-        <input id="gender" type="radio" name="gender" value="male" checked> Male<br>
-        <input id="gender" type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="male" checked> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
         <br>
-        <hr>
-        <select class="custom-select">
-                <option selected>Select your zoo</option>                        
-                <option value="Cleveland">Cleveland Zoo</option>
-                <option value="Columbus">Columbus Zoo</option>
-                <option value="Lincoln-Park">Lincoln Park Zoo</option>
-                <option value="San Diego">San Diego Zoo</option>
-                <option value="National">The National Zoo</option>                
-                
-              </select>
-        <hr>
-        <select class="custom-select">
-                <option selected>Select the species</option>
-                <option value="Polar Bear">Bear, Polar</option>
-                <option value="Cheetah">Cheetah</option>
-                <option value="Chimpanzee">Chimpanzee</option>
-                <option value="Elephant">Elephant</option>
-                <option value="Giraffe">Giraffe</option>
-                <option value="Gorilla">Gorilla</option>
-                <option value="Lemur">Lemur</option>
-                <option value="Lion">Lion</option>
-                <option value="Rhinoceros">Rhinoceros</option>
-                <option value="Tiger">Tiger</option>                
-                
-              </select>
-              <br>
-              <hr>
-              <form>Mother's Name:<br>
-              <input type="text" name="Mother's Name"><br>
-              <hr>
-              </form>
-              <form>Father's Name:<br>
-              <input type="text" name="Father's Name"><br>
-              <hr>
-              </form>
-
-        
+        <label>Zoo:</label>
+        <select id="zoo-dd" class="custom-select">
+              <!--zoos will be dynamically inserted here-->
+        </select>
+        <label>Species:</label>
+        <select id="species-dd" class="custom-select">
+              <!--species will be dynamically inserted here-->              
+        </select>
+        <label>Mom:</label>
+        <select id="mom-dd" class="custom-select">
+            <!--animals will be dynamically inserted here-->
+        </select>
+        <label>Dad:</label>
+        <select id="dad-dd" class="custom-select">
+            <!--animals will be dynamically inserted here-->
+        </select>
+        </form>
 
         <input type="submit">
       </form> 
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/js/add_animal.js"></script>
 </body>
 <footer>
 
