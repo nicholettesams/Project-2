@@ -24,7 +24,6 @@ const htmlRoutes = require("./app/routes/htmlRoutes.js");
 const apiRoutes = require("./app/routes/apiRoutes.js");
 const html = require("./app/routes/htmlRoutes.js");
 const findMate = require("./app/routes/findMateRoutes.js");
-const api = require("./app/routes/apiRoutes.js");
 const animals = require("./app/routes/animals.js");
 
 app.use(htmlRoutes);
@@ -32,7 +31,6 @@ app.use(apiRoutes);
 
 app.use(html);
 app.use(findMate);
-app.use(api);
 app.use(animals);
 
 // Start our server so that it can begin listening to client requests.

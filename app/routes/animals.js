@@ -29,7 +29,8 @@ router.get("/api/animals/:animal_id/profile", function(req, res) {
 
 
     connection.query(sql, function(err, results) {
-        if (err) throw err;
+        if (err){
+            throw err;}
 
         res.json(results)
 
@@ -39,12 +40,24 @@ router.get("/api/animals/:animal_id/profile", function(req, res) {
 
 
 //add an animal
-router.post("/api/animals", function(req, res) {
-//
-// const sql = "INSERT INTO animals\n" +
-//     "(animal_name, zoo_id, species_id, mom_id, dad_id, gender, matable, birth_date, image_URL)\n" +
-//     "values\n" +
-//     "       ('Mrs. Jumbo', 1, 1, 0, 0, 'F', TRUE, '2008-01-01', '');"
+router.post("/api/animals/add", function(req, res) {
+    const animal = req.body;
+    console.log(req.body);
+    console.log(animal);
+    console.log(animal.animal_name);
+
+
+const sql = "INSERT INTO `animals` (animal_name, zoo_id, species_id, mom_id, dad_id, gender, matable, birth_date, image_URL) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"
+
+
+    connection.query(sql, [animal.animal_name.toString(), animal.zoo_id, animal.species_id,
+        animal.mom_id, animal.dad_id, animal.gender.toString(), animal.mateable,
+        animal.birth_date, animal.image_URL.toString()],  function(err, result){
+        if(err) throw err;
+        console.log("1 record inserted");
+    });
+
+    res.send(animal);
 
 });
 
