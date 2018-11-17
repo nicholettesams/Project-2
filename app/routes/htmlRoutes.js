@@ -11,6 +11,7 @@ router.get("/add", function(req, res){
     res.sendFile(path.join(__dirname, "../public/pages/add_animal.html"));
 });
 
+
 router.get("/zoo", function(req, res) {
 
     var hbsObject = {
@@ -18,6 +19,7 @@ router.get("/zoo", function(req, res) {
     };
     console.log(hbsObject);
     res.render("index", hbsObject);
+
 });
 
 module.exports = router;

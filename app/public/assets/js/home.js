@@ -5,6 +5,7 @@ $(function() {
 
     console.log(id)
 
+
     });
 
     // Load drop down
@@ -20,7 +21,9 @@ $(function() {
             el.text(res[i].zoo_name)
             $(".dropdown-content").append(el);
 
+
         }
     }
     );
+
 });

@@ -1,6 +1,5 @@
 
 $(function() {
-
     // Load zoo drop down
     $.ajax("/api/zoos", {
     type: "GET",
@@ -77,7 +76,7 @@ $(function() {
             var el = $('<option>')
             el.attr("table_id", 0)
             el.attr("selected")
-            el.text("Selct your animal")
+            el.text("Select your animal")
             $("#dad-dd").append(el);
 
             for(i=0; i< res.length; i++){
@@ -90,4 +89,11 @@ $(function() {
             }
         });
 
-});
+
+
+
+    
+
+
+
+
