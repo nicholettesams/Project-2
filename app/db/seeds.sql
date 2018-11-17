@@ -1,5 +1,5 @@
 INSERT INTO zoos 
-(zoo_name, address, city, state, zip_code, phone, contact_name, contact_email)
+(zoo_name, address, city, state, zip_code, phone, contact_name)
 values('Cleveland Metroparks Zoo', '3900 Wildlife Way', 'Cleveland', 'OH', 44109, '216-661-6500', 'Elsa Lancaster', 'animalhusbandry@clevelandmetroparks.com'),
 		('Columbus Zoo', '4850 W Powell Road', 'Columbus', 'OH', 43065, '614-645-3400', 'Jack Hannah', 'jhannah@columbuszoo.com'),
 		('Lincoln Park Zoo', '2001 N Clark St', 'Chicago', 'IL', 60614, '312-742-2000', 'Harry Carey', 'hcareylincolnparkzoo.com'),
@@ -11,13 +11,13 @@ INSERT INTO species
 Values('Bear, Polar', 'Ursus maritimus', False, 7, 5, 15, 'Normal litter size is 2'),
 	('Cheetah', 'Acinonyx jubatus', False, 3, 2, 7, 'Normal litter size is 4'),
 	('Chimpanze', 'Pan troglodytes', True, 8, 15, 30, 'Normal litter size is 1'),
-	('Elephant, African', 'Loxodonta africana', False, 22, 10, 15, 'Difficult to mate in captivity'),
-	('Giraffe, Masai', 'Giraffa camelopardalis tipelskirchi', False, 18, 4, 10, ''),
-	('Gorilla, Western lowland', 'Gorilla gorilla gorilla', False, 8, 10, 35, ''),
-	('Lemur, Ring-Tailed', 'Lemur catta', False, 5, 2, 6, ''),
-	('Lion, African', 'Panthera leo', False, 3, 4, 9, ''),
-	('Rhinoceros, Black', 'Diceros bicornis', False, 15, 7, 15, ''),
-	('Tiger, Siberian', 'Panthera tigris', False, 3, 4, 9, '');
+	('Elephant, African', 'Loxodonta africana' False, 22, 10, 15, 'Difficult to mate in captivity'),
+	('Giraffe, Masai', 'Giraffa camelopardalis tipelskirchi' False, 18, 4, 10, ''),
+	('Gorilla, Western lowland', 'Gorilla gorilla gorilla' False, 8, 10, 35, ''),
+	('Lemur, Ring-Tailed', 'Lemur catta' False, 5, 2, 6, ''),
+	('Lion, African', 'Panthera leo' False, 3, 4, 9, ''),
+	('Rhinoceros, Black', 'Diceros bicornis' False, 15, 7, 15, ''),
+	('Tiger, Siberian', 'Panthera tigris' False, 3, 4, 9, '');
 
 INSERT INTO animals 
 (animal_name, zoo_id, species_id, mom_id, dad_id, gender, matable, birth_date, image_URL)
@@ -169,7 +169,7 @@ values
 	('Lewis', 3, 9, 0, 0, 'M', TRUE, '2009-10-04', './public/assets/images/3_RhinoB_Lewis.jpg'),
 	('Marnie', 3, 9, 0, 0, 'F', TRUE, '2008-11-05', './public/assets/images/3_RhinoB_Marnie.jpg'),
 	('Sebastian', 3, 9, 0, 0, 'M', TRUE, '2007-12-06', './public/assets/images/3_RhinoB_Sebastian.jpg'),
-	('Lana', 3, 10, 0, 0, 'F', TRUE, '2014-09-16', './public/assets/images/3_tiger_Lana.jpg'),
+	('Lana' 3, 10, 0, 0, 'F', TRUE, '2014-09-16', './public/assets/images/3_tiger_Lana.jpg'),
 	('Mandy', 3, 10, 0, 0, 'F', TRUE, '2013-10-18', './public/assets/images/3_tiger_Mandy.jpg'),
 	('Otto', 3, 10, 0, 0, 'M', TRUE, '2012-08-20', './public/assets/images/3_tiger_Otto.jpg'),
 	('Rhonda', 3, 10, 0, 0, 'F', TRUE, '2011-12-22', './public/assets/images/3_tiger_Rhonda.jpg'),
@@ -213,7 +213,7 @@ values
 	('Wazzala', 4, 8, 0, 0, 'F', TRUE, '2014-04-01', './public/assets/images/4_lioness_Wazzala.jpg'),
 	('Bintu', 4, 1, 0, 0, 'M', TRUE, '2014-01-11', './public/assets/images/4_polarbear_Bintu.jpg'),
 	('Karl', 4, 1, 0, 0, 'F', TRUE, '2014-02-21', './public/assets/images/4_polarbear_Karl.jpg'),
-	('LuLu', 4, 1, 0, 0, 'F', TRUE, '2012-04-30', './public/assets/images/4_polarbear_LuLu.jpg'),
+	('LuLu', 4, 1, 0, 0, 'F', TRUE, '2012-04-31', './public/assets/images/4_polarbear_LuLu.jpg'),
 	('Samara', 4, 1, 0, 0, 'F', TRUE, '2011-04-10', './public/assets/images/4_polarbear_Samara.jpg'),
 	('Shelly', 4, 1, 0, 0, 'F', TRUE, '2010-04-16', './public/assets/images/4_polarbear_Shelly.jpg'),
 	('Corinne', 4, 9, 0, 0, 'F', TRUE, '2011-08-02', './public/assets/images/4_RhinoB_Corinne.jpg'),
@@ -221,7 +221,7 @@ values
 	('Felix', 4, 9, 0, 0, 'M', TRUE, '2009-10-04', './public/assets/images/4_RhinoB_Felix.jpg'),
 	('Jumbo', 4, 9, 0, 0, 'M', TRUE, '2008-11-05', './public/assets/images/4_RhinoB_Jumbo.jpg'),
 	('Kimba', 4, 9, 0, 0, 'F', TRUE, '2007-12-06', './public/assets/images/4_RhinoB_Kimba.jpg'),
-	('Bella', 4, 10, 0, 0, 'F', TRUE, '2014-09-16', './public/assets/images/4_tiger_Bella.jpg'),
+	('Bella' 4, 10, 0, 0, 'F', TRUE, '2014-09-16', './public/assets/images/4_tiger_Bella.jpg'),
 	('Clementine', 4, 10, 0, 0, 'F', TRUE, '2014-10-18', './public/assets/images/4_tiger_Clementine.jpg'),
 	('Cyrus', 4, 10, 0, 0, 'M', TRUE, '2012-08-20', './public/assets/images/4_tiger_Cyrus.jpg'),
 	('Dwight', 4, 10, 0, 0, 'M', TRUE, '2011-12-22', './public/assets/images/4_tiger_Dwight.jpg'),
@@ -272,7 +272,7 @@ values
 	('Sylvester', 5, 9, 0, 0, 'M', TRUE, '2009-10-05', './public/assets/images/5_RhinoB_Sylvester.jpg'),
 	('Clarence', 5, 10, 0, 0, 'M', TRUE, '2008-11-05', './public/assets/images/5_tiger_Clarence.jpg'),
 	('Dolores', 5, 10, 0, 0, 'F', TRUE, '2007-12-06', './public/assets/images/5_tiger_Dolores.jpg'),
-	('Jasmin', 5, 10, 0, 0, 'F', TRUE, '2015-09-16', './public/assets/images/5_tiger_Jasmin.jpg'),
+	('Jasmin' 5, 10, 0, 0, 'F', TRUE, '2015-09-16', './public/assets/images/5_tiger_Jasmin.jpg'),
 	('Quon', 5, 10, 0, 0, 'M', TRUE, '2015-10-18', './public/assets/images/5_tiger_Quon.jpg'),
 	('Sylvia', 5, 10, 0, 0, 'F', TRUE, '2012-08-20', './public/assets/images/5_tiger_Sylvia.jpg');
     
@@ -281,5 +281,5 @@ INSERT INTO mates
 values
 (2, 1, True, '2017-07-01'),
 (9, 8, False, '2018-05-01'),
-(9, 8, True, '2018-07-28'),
+(9, 8, True, '2018-07-28')
 (157, 158, True, '2018-06-20');

@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS animals (
     gender VARCHAR(1),
     matable BOOLEAN,
     birth_date DATE,
-    image_URL VARCHAR(500),
+    image_URL VARCHAR(500) ,
     PRIMARY KEY (id)
 ); 
 
