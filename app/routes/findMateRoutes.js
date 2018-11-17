@@ -1,6 +1,5 @@
 var express = require("express");
 var router = express.Router()
-var connection = require("../config/connection.js");
 
 //Display array of objects as JSON
 router.get("/api/mates/:animal_id", function(req, res) {
