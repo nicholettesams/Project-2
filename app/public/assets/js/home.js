@@ -17,6 +17,7 @@ $(function() {
         for(i=0; i< res.length; i++){
             var el = $('<a>')
             el.attr("table_id", res[i].id)
+            el.attr("hfref", "{{URL:route(main.handlebars/" + res[i].id + ")}}")
             el.addClass("dd-values")
             el.text(res[i].zoo_name)
             $(".dropdown-content").append(el);  

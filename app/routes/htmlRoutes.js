@@ -11,4 +11,8 @@ router.get("/add", function(req, res){
     res.sendFile(path.join(__dirname, "../public/pages/add_animal.html"));
 });
 
+router.get("/zoo/:zoo_id", function(req, res){
+    res.sendFile(path.join(__dirname, "../views/layouts/main.handlebars"));
+});
+
 module.exports = router;
