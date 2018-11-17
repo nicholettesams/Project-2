@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 8080;
 const app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static("public"));
+app.use(express.static("app/public"));
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -20,11 +20,15 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
+const htmlRoutes = require("./app/routes/htmlRoutes.js");
+const apiRoutes = require("./app/routes/apiRoutes.js");
 const html = require("./app/routes/htmlRoutes.js");
 const findMate = require("./app/routes/findMateRoutes.js");
 const api = require("./app/routes/apiRoutes.js");
 const animals = require("./app/routes/animals.js");
 
+app.use(htmlRoutes);
+app.use(apiRoutes);
 
 app.use(html);
 app.use(findMate);

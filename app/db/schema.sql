@@ -13,6 +13,7 @@ CREATE TABLE IF NOT EXISTS zoos (
     zip_code INT NOT NULL,
     phone varchar(20),
     contact_name varchar(255),
+    contact_email varchar(500),
     PRIMARY KEY (id)
 );
 
@@ -26,14 +27,15 @@ CREATE TABLE IF NOT EXISTS animals (
     gender VARCHAR(1),
     matable BOOLEAN,
     birth_date DATE,
-    image_URL VARCHAR(500) ,
+    image_URL VARCHAR(500),
     PRIMARY KEY (id)
 ); 
 
 CREATE TABLE IF NOT EXISTS species (
     id INT AUTO_INCREMENT,
     species_name VARCHAR(100) NOT NULL,
-    endangered INT, /* Scale of 1-5*/
+    scientific_name varchar(200), 
+    endangered BOOLEAN, 
     gestation_months INT,
     mating_age_min INT,
     mating_age_max INT,
@@ -52,7 +54,7 @@ CREATE TABLE IF NOT EXISTS mates (
 
 
 CREATE VIEW view_animals as
-SELECT a.id, a.animal_name, a.gender, a.matable, a.birth_date, YEAR(now()) - YEAR(a.birth_date) - ( DAYOFYEAR(now()) < DAYOFYEAR(a.birth_date) ) as age, a.image_url
+SELECT a.id, a.zoo_id, a.animal_name, a.gender, a.matable, a.birth_date, YEAR(now()) - YEAR(a.birth_date) - ( DAYOFYEAR(now()) < DAYOFYEAR(a.birth_date) ) as age, a.image_url
 , z.zoo_name, s.species_name, IFNULL(a2.animal_name, '') as mom_name, IFNULL(a3.animal_name, '') as dad_name 
 FROM zoomate.animals as a
 INNER JOIN zoomate.zoos as z ON z.id = a.zoo_id
