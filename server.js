@@ -23,19 +23,16 @@ app.set("view engine", "handlebars");
 
 const htmlRoutes = require("./app/routes/htmlRoutes.js");
 const apiRoutes = require("./app/routes/apiRoutes.js");
-
-
 const findMateRoutes = require("./app/routes/findMateRoutes.js");
+const animals = require("./app/routes/animals.js");
+
 
 app.use(htmlRoutes);
 app.use(apiRoutes);
 app.use(findMateRoutes);
+app.use(animals);
 
-const routes = require("./app/routes/htmlRoutes.js");
 
-
-app.use(htmlRoutes);
-app.use(apiRoutes);
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
