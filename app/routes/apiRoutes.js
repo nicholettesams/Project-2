@@ -4,6 +4,8 @@ var connection = require("../config/connection.js");
 
 
 //Display array of objects as JSON
+//This route load the animals by zoo for the index.handlebars page 
+//for the animal-block to use
 router.get("/api/animals/:zoo_id", function(req, res) {
 
     var sql = "SELECT * FROM view_animals WHERE zoo_id = " + req.params.zoo_id 
