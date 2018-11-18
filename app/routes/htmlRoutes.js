@@ -19,4 +19,11 @@ router.get("/zoo", function(req, res) {
 
 });
 
+router.get("/animal", function(req, res) {
+
+    console.log(req.query)
+    res.render("animal", req.query);
+
+});
+
 module.exports = router;
