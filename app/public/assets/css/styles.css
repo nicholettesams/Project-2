@@ -70,8 +70,22 @@ h4 {
  }
 /* styling for add_animal.html page here */
 
+/* .carousel-inner {
+    width: 1300px;
+  height: 300px;
+  display: flex;
+  overflow-x: auto;
+  
+} */
+.jumbotron {
+    background-image: url("../images/Slide1.jpg");
+    background-position: center center;
+    
+
+    }
+
 #animalForm {
     font-family: 'Roboto', sans serif;
-    font-size: 24px;
+    font-size: 16px;
 }
 
