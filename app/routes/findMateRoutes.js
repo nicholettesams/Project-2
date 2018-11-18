@@ -2,7 +2,10 @@ var express = require("express");
 var router = express.Router()
 var connection = require("../config/connection.js");
 
+
 //Display array of objects as JSON
+//TODO: This route load the animals by animal_id for the animals.handlebars page 
+//for the animal-block to use
 router.get("/api/mates/:animal_id", function(req, res) {
 
     var sql = "SELECT a.id, a.animal_name, a.gender, a.matable, a.birth_date, YEAR(now()) - YEAR(a.birth_date) - ( DAYOFYEAR(now()) < DAYOFYEAR(a.birth_date) ) as age , a.image_url "
@@ -28,8 +31,10 @@ router.get("/api/mates/:animal_id", function(req, res) {
     
 });
 
+//TODO: call this from the animal-block on the animals.handlebars page to update matable
+//This can be left undone if necessary.
 router.put("/api/mates/:animal_id", function(req, res) {
-    var matable = false; //TODO: find out if we need to pass this parameter from the front end
+    var matable = false; 
 
     sql = "UPDATE animals SET matable = " + matable
     sql = sql + " WHERE id = " + req.params.animal_id;
