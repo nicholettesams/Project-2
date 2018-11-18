@@ -21,4 +21,13 @@ router.get("/zoo", function(req, res) {
 
 });
 
+//TODO: use this route to display animal.handlebars page from the index.handlebars page
+//When user clicks on the Mate button
+router.get("/animal", function(req, res) {
+
+    console.log(req.query)
+    res.render("animal", req.query);
+
+});
+
 module.exports = router;
