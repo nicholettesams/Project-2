@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- set up viewport for various size devices -->
+  <meta charset="UTF-8" meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- links to fonts and CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
+<!-- <title>Add Animal</title> -->
+
+</head>
+<body>
+    <form >Animal Name:<br>
+        <input type="text" name="animal name"><br>
+        <input type="radio" name="gender" value="male" checked> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <br>
+        <label>Zoo:</label>
+        <select id="zoo-dd" class="custom-select">
+              <!--zoos will be dynamically inserted here-->
+        </select>
+        <label>Species:</label>
+        <select id="species-dd" class="custom-select">
+              <!--species will be dynamically inserted here-->              
+        </select>
+        <label>Mom:</label>
+        <select id="mom-dd" class="custom-select">
+            <!--animals will be dynamically inserted here-->
+        </select>
+        <label>Dad:</label>
+        <select id="dad-dd" class="custom-select">
+            <!--animals will be dynamically inserted here-->
+        </select>
+        </form>
+
+        <input type="submit">
+      </form> 
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/js/add_animal.js"></script>
+</body>
+<footer>
+
+</footer>
+</html>

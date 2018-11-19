@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+  <!-- set up viewport for various size devices -->
+  <meta charset="UTF-8" meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- links to fonts and CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
+  <!-- main zoo home page.. -->
+  <title>Zoo-Mates</title>
 </head>
-<body>
-Home page
+<body id="home-body">
+  <h1>Zoo-Mates</h1>
+  <h3>Our Vision:</h3>
+  <h4>We are committed to saving animal species worldwide by<br>
+     uniting the collective expertise of our nations' zoos to lead the<br>
+     fight against extinction...one match at a time</h4>
+  
+  <div class="dropdown">
+    <button id="zoo-list" class="dropbtn">Select your zoo here</button>
+    <div class="dropdown-content">
+      <!--Options will dynamically appear here-->
+    </div>
+  </div>
+  
 
+
+
+
+  <!--script tags to js file  -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/js/home.js"></script>
 </body>
+<footer>
+  <div class="container">
+    Copyright 2018: Team Cerulean&copy; 
+  </div>
+
+</footer>
 </html>
