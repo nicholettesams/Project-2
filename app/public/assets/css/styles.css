@@ -78,12 +78,12 @@ h4 {
   
 } */
 .jumbotron {
-    background-image: url("../images/4_giraffe_Juliet.jpg");
-    background-position: center top;
+    background-image: url("../images/1_chimp_Maret2.jpg");
+    background-position: center;
     
 
 }
-.container2 {
+.container {
     background-color: rgb(4, 58, 160);
 
 }
@@ -91,7 +91,7 @@ h4 {
 #animalForm {
     font-family: 'Roboto', sans serif;
     font-size: 18px;
-    color: white;
+    color: gray;
     margin-left: 25px;
 
 }
