@@ -1,17 +1,25 @@
-<div>
+<table style="width:100%">
+    <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Birth Date</th>
+        <th>Image URL</th>
+    </tr>
+
+
     {{#each animal}}
  <tr>
-    <td>{{this.image_url}}</td>
     <td>{{this.animal_name}}</td>
-    <td>{{this.species_name}}</td>
     <td>{{this.gender}}</td>
-    <td>{{this.age}}</td> 
+    <td>{{this.birth_date}}</td>
     <td>{{this.mating_status}}</td>
+     <td>{{this.image_URL}}</td>
 
 
-    <!-- this button neeed to call the anmals.handlebars page when on the index page, but call the put route when on the animals.handlebar page -->
-    <a href="/animal?animal_id=" + {{this.id}}><button class="btn btn-lg btn-primary"><span class="fa fa-list-alt"></span> Mate</button></a>
+
+     <!-- this button neeed to call the anmals.handlebars page when on the index page, but call the put route when on the animals.handlebar page -->
+   <td> <a href="/animal?animal_id=" + {{this.id}}><button class="btn btn-lg btn-primary"><span class="fa fa-list-alt"></span> Mate</button></a> </td>
 
 </tr>
    {{/each}}
-  </div>
+</table>

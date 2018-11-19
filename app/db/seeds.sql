@@ -1,3 +1,4 @@
+Use zoomate;
 INSERT INTO zoos 
 (zoo_name, address, city, state, zip_code, phone, contact_name, contact_email)
 values('Cleveland Metroparks Zoo', '3900 Wildlife Way', 'Cleveland', 'OH', 44109, '216-661-6500', 'Elsa Lancaster', 'animalhusbandry@clevelandmetroparks.com'),
