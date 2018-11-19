@@ -1,5 +1,6 @@
+Use zoomate;
 INSERT INTO zoos 
-(zoo_name, address, city, state, zip_code, phone, contact_name, contact_email) 
+(zoo_name, address, city, state, zip_code, phone, contact_name, contact_email)
 values('Cleveland Metroparks Zoo', '3900 Wildlife Way', 'Cleveland', 'OH', 44109, '216-661-6500', 'Elsa Lancaster', 'animalhusbandry@clevelandmetroparks.com'),
 		('Columbus Zoo', '4850 W Powell Road', 'Columbus', 'OH', 43065, '614-645-3400', 'Jack Hannah', 'jhannah@columbuszoo.com'),
 		('Lincoln Park Zoo', '2001 N Clark St', 'Chicago', 'IL', 60614, '312-742-2000', 'Harry Carey', 'hcareylincolnparkzoo.com'),
@@ -278,7 +279,7 @@ values
     
 INSERT INTO mates
 (female_id, male_id, success, breed_date)
-values 
+values
 (2, 1, True, '2017-07-01'),
 (9, 8, False, '2018-05-01'),
 (9, 8, True, '2018-07-28'),

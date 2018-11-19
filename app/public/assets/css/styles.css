@@ -68,3 +68,39 @@ h4 {
     color: white;
     text-align: left;
  }
+/* styling for add_animal.html page here */
+
+/* .carousel-inner {
+    width: 1300px;
+  height: 300px;
+  display: flex;
+  overflow-x: auto;
+  
+} */
+.jumbotron {
+    background-image: url("../images/1_chimp_Maret2.jpg");
+    background-position: center;
+    
+
+}
+.container {
+    background-color: rgb(4, 58, 160);
+
+}
+
+#animalForm {
+    font-family: 'Roboto', sans serif;
+    font-size: 18px;
+    color: gray;
+    margin-left: 25px;
+
+}
+
+#animalName {
+    font-size: 14px;
+
+}
+
+.custom-select {
+    position: relative;
+}

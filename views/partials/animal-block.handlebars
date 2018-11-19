@@ -1,0 +1,25 @@
+<table style="width:100%">
+    <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Birth Date</th>
+        <th>Image URL</th>
+    </tr>
+
+
+    {{#each animal}}
+ <tr>
+    <td>{{this.animal_name}}</td>
+    <td>{{this.gender}}</td>
+    <td>{{this.birth_date}}</td>
+    <td>{{this.mating_status}}</td>
+     <td>{{this.image_URL}}</td>
+
+
+
+     <!-- this button neeed to call the anmals.handlebars page when on the index page, but call the put route when on the animals.handlebar page -->
+   <td> <a href="/api/mates/animal_id?animal_id={{this.id}}"><button class="btn btn-lg btn-primary"><span class="fa fa-list-alt"></span> Mate</button></a> </td>
+
+</tr>
+   {{/each}}
+</table>

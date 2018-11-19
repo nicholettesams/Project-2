@@ -1,12 +1,4 @@
 $(function() {
-    $(".dropdown-content").on("click", ".dd-values", function(event) {
-
-        var id = $(this).data("table_id");
-
-    console.log(id)
-  
-
-    });
 
     // Load drop down
     $.ajax("/api/zoos", {
@@ -17,15 +9,12 @@ $(function() {
         for(i=0; i< res.length; i++){
             var el = $('<a>')
             el.attr("table_id", res[i].id)
-            el.attr("hfref", "{{URL:route(main.handlebars/" + res[i].id + ")}}")
+            el.attr("href", "zoo?zoo_id=" + res[i].id + "&zoo_name=" + res[i].zoo_name)
             el.addClass("dd-values")
             el.text(res[i].zoo_name)
-            $(".dropdown-content").append(el);  
+            $(".dropdown-content").append(el);
 
         }
     }
     );
-
-    
-
 });
