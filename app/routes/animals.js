@@ -16,8 +16,6 @@ router.get("/api/animals/:zoo_id", function(req, res) {
 
     });
 
-
-
 });
 
 
@@ -25,7 +23,6 @@ router.get("/api/animals/:zoo_id", function(req, res) {
 router.get("/api/animals/:animal_id/profile", function(req, res) {
 
     const sql = "SELECT * FROM animals WHERE id = "+ req.params.animal_id;
-
 
 
     connection.query(sql, function(err, results) {
@@ -41,18 +38,24 @@ router.get("/api/animals/:animal_id/profile", function(req, res) {
 
 //add an animal
 router.post("/api/animals/add", function(req, res) {
+
     const animal = req.body;
-    console.log(req.body);
-    console.log(animal);
-    console.log(animal.animal_name);
 
 
-const sql = "INSERT INTO `animals` (animal_name, zoo_id, species_id, mom_id, dad_id, gender, matable, birth_date, image_URL) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"
+    console.log("REQ.BODY: ", req.body);
 
 
-    connection.query(sql, [animal.animal_name.toString(), animal.zoo_id, animal.species_id,
-        animal.mom_id, animal.dad_id, animal.gender.toString(), animal.mateable,
-        animal.birth_date, animal.image_URL.toString()],  function(err, result){
+    console.log("ANIMAL OBJ: ", animal);
+
+    console.log("req.body.animal_name: ", req.body.animal_name);
+    console.log("animal obj name: ", animal.animal_name);
+
+
+const sql = "INSERT INTO `animals` (animal_name, zoo_id, species_id, mom_id, dad_id, gender) VALUES (?, ?, ?, ?, ?, ?)"
+
+
+    connection.query(sql, [animal.animal_name, animal.zoo_id, animal.species_id,
+        animal.mom_id, animal.dad_id, animal.gender],  function(err, result){
         if(err) throw err;
         console.log("1 record inserted");
     });
@@ -61,9 +64,7 @@ const sql = "INSERT INTO `animals` (animal_name, zoo_id, species_id, mom_id, dad
 
 });
 
-router.put("/api/animals/:animal_id", function(req, res) {
 
-});
 
 
 
