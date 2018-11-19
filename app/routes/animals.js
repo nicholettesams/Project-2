@@ -60,7 +60,8 @@ const sql = "INSERT INTO `animals` (animal_name, zoo_id, species_id, mom_id, dad
         console.log("1 record inserted");
     });
 
-    res.send(animal);
+    // res.send(animal);
+    res.redirect("/")
 
 });
 
