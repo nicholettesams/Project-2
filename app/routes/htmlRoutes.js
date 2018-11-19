@@ -29,10 +29,12 @@ router.get("/add", function(req, res){
 router.get("/zoo", function(req, res) {
 
     console.log(req.query)
+    const zoo_name = req.query.zoo_name;
 
+    const sql = "SELECT * from animals where zoo_id ="  + req.query.zoo_id +";";
 
-    connection.query("SELECT * from animals where zoo_id = 1;" ,function( err, data){
-        res.render("index", {animal:data, zoo_name: req.query.zoo_name});
+    connection.query(sql,function( err, data){
+        res.render("index", {animal:data, zoo_name: zoo_name});
 
         console.log({animal:data, zoo_name: req.query})
         // res.render("index", req.query);
