@@ -36,8 +36,7 @@ router.get("/zoo", function(req, res) {
     connection.query(sql,function( err, data){
         res.render("index", {animal:data, zoo_name: zoo_name});
 
-        console.log({animal:data, zoo_name: req.query})
-        // res.render("index", req.query);
+        // console.log({animal:data, zoo_name: req.query})
 
     })
 });
