@@ -8,8 +8,10 @@
     <td>{{this.age}}</td> 
     <td>{{this.mating_status}}</td>
 
+
     <!-- this button neeed to call the anmals.handlebars page when on the index page, but call the put route when on the animals.handlebar page -->
-    <td><button type="button" class="btn btn-primary btn-sm">Mate</button></td>
+    <a href="/animal?animal_id=" + {{this.id}}><button class="btn btn-lg btn-primary"><span class="fa fa-list-alt"></span> Mate</button></a>
+
 </tr>
    {{/each}}
   </div>

@@ -7,10 +7,10 @@
 - Dana Shelton
 
 ## Intro
-Zoo Mates is a website designed to help neighboring zoos find possible mates for their animals.  Zoos must work together to ensure offspring from differnt family lines are produced.  Breeding animals in captivity is a vital part of saving species from extinction.
+Zoo Mates is a website designed to help neighboring zoos find possible mates for their animals.  Zoos must work together to ensure offspring from diffrent family lines are produced.  Breeding animals in captivity is a vital part of saving species from extinction.
 
 ## Design Process
-Our team worked together on the overall design and then split into two teams, a front-end team (Dana and Mark) and a back-end team (Nicholas and Nicholette). The front-end team was dedicated to the HTML, CSS, Hanldebars and content of the pages, utilizing the Bootstrap framework for most of the styling. The back-end team worked on javascript, routes and mysql queries. After each person finished their task, we reviewed and made tweaks as a group to ensure cohesion.
+Our team worked together on the overall design and then split into two teams, a front-end team (Dana and Mark) and a back-end team (Nicholas and Nicholette). The front-end team was dedicated to the HTML, CSS, Handlebars and content of the pages, utilizing the Bootstrap framework for most of the styling. The back-end team worked on javascript, routes and mysql queries. After each person finished their task, we reviewed and made tweaks as a group to ensure cohesion.
 
 ## Technologies
 - HTML 
@@ -29,7 +29,7 @@ From the home page, a user will select the zoo that they work at.  This will dis
 A user can also choose to "Add an Animal" from the zoo detail page.  This will display a form where a user can enter all the information for an animal and it will then be saved to the database.
 
 ## Future development
-- A detal page that would display all fields for an animal along with zoo contact information and lineage and mating history.
+- A detail page that would display all fields for an animal along with zoo contact information and lineage and mating history.
 - Login screen to only allow employees of the zoo to gain access
 - Filter for narrowing search results of animals
 - Ability to update/add/delete bredding history
