@@ -16,18 +16,18 @@
 <body>
   <!-- <div class="container2"> -->
     <div class="jumbotron">
-    <div class="container"> 
+    <div class="container">
 
-   
-             
-      
+
+
+
     <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>          
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
         </ol>
 
         <div class="carousel-inner">
@@ -58,45 +58,46 @@
       </div>
     
       
-      </div>--> 
-      </div> 
+      </div>-->
+      </div>
     </div>
   <!-- </div>  -->
-    
-    <form class="col-4" id="animalForm">Animal Name:<br>
-        <input id="animalName" type="text" name="animal name" placeholder="ie. Dumbo" autofocus/> <br><br>
-               
-        <input type="radio" name="gender" value="male"> Male<br>
-        <input type="radio" name="gender" value="female"> Female<br>
+
+
+
+    <form id="animalForm" action="/api/animals/add" method="post">Animal Name:<br>
+        <input type="text" name="animal_name" placeholder="ie. Dumbo" autofocus/> <br>
+        <hr>
+
+        <input type="radio" name="gender" value="M" > Male<br>
+        <input type="radio" name="gender" value="F"> Female<br>
         <br>
         <label>Zoo:</label>
-        <select id="zoo-dd" class="custom-select">
+        <select id="zoo_id" name="zoo_id" class="custom-select">
               <!--zoos will be dynamically inserted here-->
         </select>
         <label>Species:</label>
-        <select id="species-dd" class="custom-select">
-              <!--species will be dynamically inserted here-->              
+        <select id="species_id" name="species_id" class="custom-select">
+              <!--species will be dynamically inserted here-->
         </select>
         <label>Mom:</label>
-        <select id="mom-dd" class="custom-select">
+        <select id="mom_id" name="mom_id" class="custom-select">
             <!--animals will be dynamically inserted here-->
         </select>
         <label>Dad:</label>
-        <select id="dad-dd" class="custom-select">
+        <select id="dad_id" name="dad_id" class="custom-select">
             <!--animals will be dynamically inserted here-->
         </select>
-        </form>
-
         <input type="submit">
       </form>
-      
+
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="assets/js/add_animal.js"></script>
       <!-- <footer>
         <div class="container">
-          Copyright 2018: Team Cerulean&copy; 
+          Copyright 2018: Team Cerulean&copy;
         </div>
-        
+
       </footer> -->
     </body>
 </html>

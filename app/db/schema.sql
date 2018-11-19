@@ -1,4 +1,3 @@
-
 DROP DATABASE IF EXISTS zoomate;
 
 CREATE DATABASE zoomate;
