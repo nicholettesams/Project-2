@@ -78,14 +78,29 @@ h4 {
   
 } */
 .jumbotron {
-    background-image: url("../images/Slide1.jpg");
-    background-position: center center;
+    background-image: url("../images/4_giraffe_Juliet.jpg");
+    background-position: center top;
     
 
-    }
+}
+.container2 {
+    background-color: rgb(4, 58, 160);
+
+}
 
 #animalForm {
     font-family: 'Roboto', sans serif;
-    font-size: 16px;
+    font-size: 18px;
+    color: white;
+    margin-left: 25px;
+
 }
 
+#animalName {
+    font-size: 14px;
+
+}
+
+.custom-select {
+    position: relative;
+}
