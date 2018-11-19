@@ -2,46 +2,46 @@
 $(function() {
     // Load zoo drop down
     $.ajax("/api/zoos", {
-    type: "GET",
+        type: "GET",
     }).then(
-    function(res) {
+        function (res) {
 
-        var el = $('<option>')
-        el.attr("table_id", 0)
-        el.attr("selected")
-        el.text("Select your zoo")
-        $("#zoo-dd").append(el); 
-
-        for(i=0; i< res.length; i++){
             var el = $('<option>')
-            el.attr("table_id", res[i].id)
-            el.attr("value", res[i].zoo_name)
-            el.text(res[i].zoo_name)
-            $("#zoo-dd").append(el);  
+            el.attr("table_id", 0)
+            el.attr("selected")
+            el.text("Select your zoo")
+            $("#zoo_id").append(el);
 
-        }
-    });
+            for (i = 0; i < res.length; i++) {
+                var el = $('<option>')
+                el.attr("value", res[i].id)
+                // el.attr("value", res[i].zoo_name)
+                el.text(res[i].zoo_name)
+                $("#zoo_id").append(el);
+
+            }
+        });
 
 
     // Load species drop down
     $.ajax("/api/species", {
         type: "GET",
-        }).then(
-        function(res) {
-    
+    }).then(
+        function (res) {
+
             var el = $('<option>')
             el.attr("table_id", 0)
             el.attr("selected")
             el.text("Select your species")
-            $("#species-dd").append(el); 
-    
-            for(i=0; i< res.length; i++){
+            $("#species_id").append(el);
+
+            for (i = 0; i < res.length; i++) {
                 var el = $('<option>')
-                el.attr("table_id", res[i].id)
-                el.attr("value", res[i].species_name)
+                el.attr("value", res[i].id)
+                // el.attr("value", res[i].species_name)
                 el.text(res[i].species_name)
-                $("#species-dd").append(el);  
-    
+                $("#species_id").append(el);
+
             }
         });
 
@@ -49,42 +49,42 @@ $(function() {
     // Load mom drop down
     $.ajax("/api/animals", {
         type: "GET",
-        }).then(
-        function(res) {
+    }).then(
+        function (res) {
 
             var el = $('<option>')
             el.attr("table_id", 0)
             el.attr("selected")
             el.text("Select your animal")
-            $("#mom-dd").append(el); 
+            $("#mom_id").append(el);
 
-            for(i=0; i< res.length; i++){
+            for (i = 0; i < res.length; i++) {
                 var el = $('<option>')
-                el.attr("table_id", res[i].id)
-                el.attr("value", res[i].animal_name)
+                el.attr("value", res[i].id)
+                // el.attr("value", res[i].animal_name)
                 el.text(res[i].animal_name)
-                $("#mom-dd").append(el);  
+                $("#mom_id").append(el);
             }
         });
 
     // Load dad drop down
     $.ajax("/api/animals", {
         type: "GET",
-        }).then(
-        function(res) {
+    }).then(
+        function (res) {
 
             var el = $('<option>')
             el.attr("table_id", 0)
             el.attr("selected")
             el.text("Select your animal")
-            $("#dad-dd").append(el);
+            $("#dad_id").append(el);
 
-            for(i=0; i< res.length; i++){
+            for (i = 0; i < res.length; i++) {
                 var el = $('<option>')
-                el.attr("table_id", res[i].id)
-                el.attr("value", res[i].animal_name)
+                el.attr("value", res[i].id)
+                // el.attr("value", res[i].animal_name)
                 el.text(res[i].animal_name)
-                $("#dad-dd").append(el);
+                $("#dad_id").append(el);
 
             }
         });
