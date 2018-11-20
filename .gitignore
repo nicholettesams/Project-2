@@ -62,3 +62,4 @@ typings/
 
 #intellij nic dev file
 .idea
+node_modules

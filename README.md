@@ -37,5 +37,3 @@ A user can also choose to "Add an Animal" from the zoo detail page.  This will d
 - Ability to update/add/delete species information
 - Ability to update/delete animals 
 - Map showing address of zoo 
-
-version 2
