@@ -32,7 +32,7 @@ A user can also choose to "Add an Animal" from the zoo detail page.  This will d
 - A detail page that would display all fields for an animal along with zoo contact information and lineage and mating history.
 - Login screen to only allow employees of the zoo to gain access
 - Filter for narrowing search results of animals
-- Ability to update/add/delete bredding history
+- Ability to update/add/delete breeding history
 - Abiltiy to update/add/delete zoo information
 - Ability to update/add/delete species information
 - Ability to update/delete animals 
