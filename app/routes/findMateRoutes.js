@@ -4,13 +4,9 @@ var connection = require("../config/connection.js");
 
 
 //Display array of objects as JSON
-//TODO: This route load the animals by animal_id for the animals.handlebars page 
-//for the animal-block to use
 router.get("/api/mates/:animal_id", function(req, res) {
 
     console.log("MATES REQ.QUERY: ", req.query);
-
-
 
     console.log("MATES REQ.PARAMS: ", req.params);
 
@@ -32,13 +28,12 @@ router.get("/api/mates/:animal_id", function(req, res) {
     connection.query(sql, function(err, data) {
         if (err) throw err;
 
-        res.render("index", {animal:data});
+        res.render("animal", {animal:data, mate_name: req.query.animal_name, mate_button: false});
 
-        console.log({animal:data});
+        console.log({animal:data, mate_name: req.query.animal_name, mate_button: false});
 
 
     });
-    
 });
 
 //TODO: call this from the animal-block on the animals.handlebars page to update matable
