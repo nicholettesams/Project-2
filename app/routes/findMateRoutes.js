@@ -1,5 +1,5 @@
 var express = require("express");
-var router = express.Router()
+var router = express.Router();
 var connection = require("../config/connection.js");
 
 
@@ -49,4 +49,4 @@ router.put("/api/mates/:animal_id", function(req, res) {
 
 
 
-module.exports = router
+module.exports = router;
