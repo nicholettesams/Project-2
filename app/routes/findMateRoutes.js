@@ -13,7 +13,7 @@ router.get("/api/mates/:animal_id", function(req, res) {
 
     var sql = "SELECT a.id, a.animal_name, a.gender, a.matable, a.birth_date, YEAR(now()) - YEAR(a.birth_date) - ( DAYOFYEAR(now()) < DAYOFYEAR(a.birth_date) ) as age , a.image_url "
     sql = sql + ", z.zoo_name, s.species_name, IFNULL(a2.animal_name, '') as mom_name, IFNULL(a3.animal_name, '') as dad_name "
-    sql = sql + "FROM zoomate.animals as a "
+    sql = sql + "FROM animals as a "
     sql = sql + "INNER JOIN zoos as z ON z.id = a.zoo_id "
     sql = sql + "INNER JOIN species as s ON a.species_id = s.id "
     sql = sql + "LEFT JOIN animals as a2 ON a.mom_id = a2.id "
