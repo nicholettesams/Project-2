@@ -1,10 +1,11 @@
-<table style="width:100%">
+<table>
     <tr>
         <th>Name</th>
         <th>Species</th>
         <th>Gender</th>
         <th>Age</th>
         <th>Zoo</th>
+        <th></th>
     </tr>
 
 
@@ -15,7 +16,7 @@
     <td>{{this.gender}}</td>
     <td>{{this.age}}</td>
     <td>{{this.zoo_name}}</td>
-    <td> <a href="/api/mates/animal_id?animal_id={{this.id}}"><button class="btn btn-lg btn-primary"><span class="fa fa-list-alt"></span> Mate</button></a> </td>
+    <td> <a href="/api/mates/animal_id?animal_id={{this.id}}&mate_name={{this.animal_name}}"><button class="btn btn-lg btn-primary"><span class="fa fa-list-alt"></span> Mate</button></a> </td>
 
 </tr>
    {{/each}}
