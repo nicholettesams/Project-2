@@ -11,13 +11,14 @@ router.get("/api/mates/:animal_id", function(req, res) {
     console.log("MATES REQ.PARAMS: ", req.params);
 
 
-    var sql = "SELECT a.id, a.animal_name, a.gender, a.matable, a.birth_date, YEAR(now()) - YEAR(a.birth_date) - ( DAYOFYEAR(now()) < DAYOFYEAR(a.birth_date) ) as age , a.image_url "
+    var sql = "SELECT m.animal_name as mate_name, a.id, a.animal_name, a.gender, a.matable, a.birth_date, YEAR(now()) - YEAR(a.birth_date) - ( DAYOFYEAR(now()) < DAYOFYEAR(a.birth_date) ) as age , a.image_url "
     sql = sql + ", z.zoo_name, s.species_name, IFNULL(a2.animal_name, '') as mom_name, IFNULL(a3.animal_name, '') as dad_name "
     sql = sql + "FROM zoomate.animals as a "
-    sql = sql + "INNER JOIN zoomate.zoos as z ON z.id = a.zoo_id "
-    sql = sql + "INNER JOIN zoomate.species as s ON a.species_id = s.id "
-    sql = sql + "LEFT JOIN zoomate.animals as a2 ON a.mom_id = a2.id "
-    sql = sql + "LEFT JOIN zoomate.animals as a3 ON a.dad_id = a3.id "
+    sql = sql + "INNER JOIN zoos as z ON z.id = a.zoo_id "
+    sql = sql + "INNER JOIN species as s ON a.species_id = s.id "
+    sql = sql + "LEFT JOIN animals as a2 ON a.mom_id = a2.id "
+    sql = sql + "LEFT JOIN animals as a3 ON a.dad_id = a3.id "
+    sql = sql + "CROSS JOIN (select animal_name from animals where id = " + req.query.animal_id + ") as m "
     sql = sql + "WHERE YEAR(now()) - YEAR(a.birth_date) - ( DAYOFYEAR(now()) < DAYOFYEAR(a.birth_date) ) >= s.mating_age_min "
     sql = sql + "AND YEAR(now()) - YEAR(a.birth_date) - ( DAYOFYEAR(now()) < DAYOFYEAR(a.birth_date) ) <= s.mating_age_max "
     sql = sql + "AND a.matable = 1 "
