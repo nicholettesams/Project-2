@@ -24,7 +24,7 @@ INSERT INTO animals
 (animal_name, zoo_id, species_id, mom_id, dad_id, gender, matable, birth_date, image_URL)
 values
 	('Jackson', 1, 4, 0, 0, 'M', TRUE, '2008-01-01', './public/assets/images/1_AfrElephant_Jackson.jpg'),
-	('Osuma.', 1, 4, 0, 0, 'F', TRUE, '2007-02-06', './public/assets/images/1_AfrElephant_Osuma.jpg'),
+	('Osuma', 1, 4, 0, 0, 'F', TRUE, '2007-02-06', './public/assets/images/1_AfrElephant_Osuma.jpg'),
 	('Shakira', 1, 4, 2, 1, 'F', FALSE, '2018-05-02', './public/assets/images/1_AfrElephant_Shakira.jpg'),
     ('Sumari', 1, 4, 0, 0, 'F', TRUE, '2007-05-23', './public/assets/images/1_AfrElephant_Sumari.jpg'),
 	('Wilbur', 1, 4, 0, 0, 'M', TRUE, '2009-08-13', './public/assets/images/1_AfrElephant_Wilbur.jpg'),

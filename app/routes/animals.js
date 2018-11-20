@@ -51,11 +51,11 @@ router.post("/api/animals/add", function(req, res) {
     console.log("animal obj name: ", animal.animal_name);
 
 
-const sql = "INSERT INTO `animals` (animal_name, zoo_id, species_id, mom_id, dad_id, gender) VALUES (?, ?, ?, ?, ?, ?)"
+const sql = "INSERT INTO `animals` (animal_name, zoo_id, species_id, mom_id, dad_id, gender, birth_date) VALUES (?, ?, ?, ?, ?, ?, ?)"
 
 
     connection.query(sql, [animal.animal_name, animal.zoo_id, animal.species_id,
-        animal.mom_id, animal.dad_id, animal.gender],  function(err, result){
+        animal.mom_id, animal.dad_id, animal.gender, animal.birth_date],  function(err, result){
         if(err) throw err;
         console.log("1 record inserted");
     });

@@ -29,9 +29,13 @@
     
     <form class="col-4" id="animalForm">Animal Name:<br>
         <input id="animalName" type="text" name="animal name" placeholder="ie. Dumbo" autofocus/> <br>
-               
+         
+        <label>Gender:</label><br>
         <input type="radio" name="gender" value="male"> Male<br>
         <input type="radio" name="gender" value="female"> Female<br>
+
+        <label>Birth Date:</label>
+        <input type="date" id="birth_date" name="birth_date" min="1900-01-01">
         
         <label>Zoo:</label>
         <select id="zoo_id" name="zoo_id" class="custom-select">
