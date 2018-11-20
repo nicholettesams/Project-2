@@ -75,7 +75,7 @@ values
 	('Shawna', 1, 10, 0, 0, 'F', TRUE, '2010-05-24', './public/assets/images/1_tiger_Shawna.jpg'),
 
 	('Adam', 2, 4, 0, 0, 'M', TRUE, '2008-01-01', './public/assets/images/2_AfrElephant_Adam.jpg'),
-	('Alexa.', 2, 4, 0, 0, 'F', TRUE, '2007-02-06', './public/assets/images/2_AfrElephant_Alexa.jpg'),
+	('Alexa', 2, 4, 0, 0, 'F', TRUE, '2007-02-06', './public/assets/images/2_AfrElephant_Alexa.jpg'),
 	('Karina', 2, 4, 0, 0, 'F', TRUE, '2018-05-02', './public/assets/images/2_AfrElephant_Karina.jpg'),
     ('Lucille', 2, 4, 0, 0, 'F', TRUE, '2007-05-23', './public/assets/images/2_AfrElephant_Lucille.jpg'),
 	('Rex', 2, 4, 0, 0, 'M', TRUE, '2009-08-13', './public/assets/images/2_AfrElephant_Rex.jpg'),
