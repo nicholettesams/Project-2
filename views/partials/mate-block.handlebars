@@ -1,0 +1,20 @@
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Species</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Zoo</th>
+    </tr>
+
+
+    {{#each animal}}
+ <tr>
+    <td>{{this.animal_name}}</td>
+    <td>{{this.species_name}}</td>
+    <td>{{this.gender}}</td>
+    <td>{{this.age}}</td>
+    <td>{{this.zoo_name}}</td>
+</tr>
+   {{/each}}
+</table>
